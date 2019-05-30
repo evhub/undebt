@@ -42,7 +42,7 @@ def _load_text(path):
 @_exit_fail_upon_error
 def _write_result_text(result_text, path, dry_run):
     if not dry_run and path:
-        with open(path, 'w') as file_obj:
+        with open(path, 'w', encoding="utf-8") as file_obj:
             file_obj.write(result_text)
     else:
         if path:
