@@ -30,7 +30,7 @@ def _load_text(path):
     if path is None:
         file_obj = sys.stdin
     else:
-        file_obj = open(path, 'r')
+        file_obj = open(path, 'r', encoding="utf-8")
 
     try:
         return file_obj.read()
